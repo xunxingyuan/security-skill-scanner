@@ -1,6 +1,6 @@
 {
     "name": "openclaw-security",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "description": "Security scanner for OpenClaw skills",
     "author": "xxy",
     "license": "MIT",
@@ -14,6 +14,9 @@
         "static-analysis",
         "code-review"
     ],
+    "scripts": {
+        "publish:skill": "./scripts/publish.sh"
+    },
     "dependencies": {
         "@babel/parser": "^7.26.0",
         "@babel/traverse": "^7.26.0"
