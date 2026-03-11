@@ -1,7 +1,7 @@
 ---
 name: openclaw-security-suite
 description: Comprehensive security suite for OpenClaw skills. Includes static scanning (AST + keywords) and AI-powered semantic behavior review to detect malicious code.
-version: 0.2.1
+version: 0.2.3
 tags:
   - security
   - scanner
