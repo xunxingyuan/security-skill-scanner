@@ -1,0 +1,13 @@
+{
+    "name": "openclaw-security",
+    "version": "0.2.0",
+    "description": "Security scanner for OpenClaw skills",
+    "author": "xxy",
+    "license": "MIT",
+    "type": "module",
+    "dependencies": {
+        "@babel/parser": "^7.26.0",
+        "@babel/traverse": "^7.26.0",
+        "vm2": "^3.9.19"
+    }
+}
