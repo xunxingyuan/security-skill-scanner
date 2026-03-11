@@ -5,6 +5,15 @@
     "author": "xxy",
     "license": "MIT",
     "type": "module",
+    "keywords": [
+        "openclaw",
+        "security",
+        "scanner",
+        "skill",
+        "clawhub",
+        "static-analysis",
+        "code-review"
+    ],
     "dependencies": {
         "@babel/parser": "^7.26.0",
         "@babel/traverse": "^7.26.0"
