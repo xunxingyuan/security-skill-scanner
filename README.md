@@ -26,18 +26,19 @@ security_skill_scanner/
     └── review_skill/index.ts # Skill: AI-assisted code review
 ```
 
-## Skills
+### `openclaw-security-suite`
 
-### `security.scan_skill`
-
-Static analysis scan for a skill directory. Combines AST scanning and keyword matching.
+Unified security tool providing both static analysis and AI-assisted code review.
 
 **Input:**
 ```json
-{ "path": "/path/to/skill/directory" }
+{ 
+  "action": "scan", // or "review"
+  "path": "/path/to/skill/directory" 
+}
 ```
 
-**Output:**
+**Output (Scan):**
 ```json
 {
   "safe": false,
@@ -51,15 +52,6 @@ Static analysis scan for a skill directory. Combines AST scanning and keyword ma
     }
   ]
 }
-```
-
-### `security.review_skill`
-
-AI-powered code review using an LLM to detect malicious patterns like data exfiltration, credential leaks, and system modification.
-
-**Input:**
-```json
-{ "file": "/path/to/file.ts" }
 ```
 
 ## Security Layers
