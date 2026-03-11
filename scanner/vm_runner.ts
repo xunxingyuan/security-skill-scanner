@@ -1,21 +1,13 @@
-import { NodeVM } from "vm2"
+import vm from "node:vm"
 
 export function runSandbox(code: string) {
 
-    const vm = new NodeVM({
+    const context = vm.createContext(Object.create(null))
 
-        console: "off",
-
-        sandbox: {},
-
-        require: {
-            external: false
-        },
-
+    const result = vm.runInContext(code, context, {
         timeout: 1000
-
     })
 
-    return vm.run(code)
+    return result
 
 }

@@ -1,5 +1,9 @@
 import { parse } from "@babel/parser"
-import traverse from "@babel/traverse"
+import _traverse from "@babel/traverse"
+import type { NodePath } from "@babel/traverse"
+import type { ImportDeclaration, CallExpression } from "@babel/types"
+
+const traverse = (_traverse as any).default || _traverse
 
 export function astScan(code: string, policy: any) {
 
@@ -12,7 +16,7 @@ export function astScan(code: string, policy: any) {
 
     traverse(ast, {
 
-        ImportDeclaration(path) {
+        ImportDeclaration(path: NodePath<ImportDeclaration>) {
 
             const moduleName = path.node.source.value
 
@@ -27,11 +31,13 @@ export function astScan(code: string, policy: any) {
 
         },
 
-        CallExpression(path) {
+        CallExpression(path: NodePath<CallExpression>) {
 
-            const name = path.node.callee.name
+            const callee = path.node.callee
 
-            if (policy.blocked_functions.includes(name)) {
+            const name = callee.type === "Identifier" ? callee.name : undefined
+
+            if (name && policy.blocked_functions.includes(name)) {
 
                 issues.push({
                     type: "blocked_function",
