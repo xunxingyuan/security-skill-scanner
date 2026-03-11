@@ -1,5 +1,4 @@
----
-name: security-scan
+name: security-skill-scanner
 description: Static security scan for OpenClaw skill code. Detects blocked module imports, dangerous function calls, sensitive file access, and suspicious patterns.
 version: 0.2.0
 tags:

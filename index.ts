@@ -1,5 +1,5 @@
-import scanSkill from "./skills/scan_skill/index.js"
-import reviewSkill from "./skills/review_skill/index.js"
+import scanSkill from "./skills/security_scan_skill/index.js"
+import reviewSkill from "./skills/security_review_skill/index.js"
 
 export default {
 

@@ -1,5 +1,4 @@
----
-name: security-review
+name: security-skill-reviewer
 description: AI-powered code review that uses an LLM to detect malicious behavior patterns like data exfiltration, credential leaks, and system modification.
 version: 0.2.0
 tags:
